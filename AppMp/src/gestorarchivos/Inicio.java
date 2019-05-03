@@ -46,7 +46,7 @@ public class Inicio extends javax.swing.JFrame {
         if (todoB.isSelected()) {
             input_nombreB.setVisible(true);
             lista_tiposB.setVisible(true);
-            lista_categoriasB.setVisible(true); 
+            lista_categoriasB.setVisible(true);
         }
         
     }
@@ -143,7 +143,7 @@ public class Inicio extends javax.swing.JFrame {
         cambiar_colorI = new javax.swing.JButton();
         nueva_categoriaI = new javax.swing.JButton();
         cancelarI = new javax.swing.JButton();
-        inicio_mostrarI = new javax.swing.JPanel();
+        panelInicio = new javax.swing.JLabel();
 
         BuscarP.setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         BuscarP.setModal(true);
@@ -1183,16 +1183,8 @@ public class Inicio extends javax.swing.JFrame {
             }
         });
 
-        javax.swing.GroupLayout inicio_mostrarILayout = new javax.swing.GroupLayout(inicio_mostrarI);
-        inicio_mostrarI.setLayout(inicio_mostrarILayout);
-        inicio_mostrarILayout.setHorizontalGroup(
-            inicio_mostrarILayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 568, Short.MAX_VALUE)
-        );
-        inicio_mostrarILayout.setVerticalGroup(
-            inicio_mostrarILayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 236, Short.MAX_VALUE)
-        );
+        panelInicio.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagen/PortadaInicio.jpeg"))); // NOI18N
+        panelInicio.setPreferredSize(new java.awt.Dimension(568, 236));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -1201,7 +1193,7 @@ public class Inicio extends javax.swing.JFrame {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap(28, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(inicio_mostrarI, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(panelInicio, javax.swing.GroupLayout.PREFERRED_SIZE, 568, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(cancelarI, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(buscarI, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -1222,11 +1214,11 @@ public class Inicio extends javax.swing.JFrame {
                     .addComponent(agregarI, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(cambiar_colorI, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(nueva_categoriaI, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(inicio_mostrarI, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGap(18, 18, 18)
+                .addComponent(panelInicio, javax.swing.GroupLayout.PREFERRED_SIZE, 236, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(19, 19, 19)
                 .addComponent(cancelarI, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(60, 60, 60))
+                .addContainerGap())
         );
 
         getAccessibleContext().setAccessibleDescription("");
@@ -1497,10 +1489,11 @@ public class Inicio extends javax.swing.JFrame {
         selectorDirectorios.setDialogTitle("Seleccionador de Archivos");
         selectorDirectorios.setAcceptAllFileFilterUsed(false);
             
-        FileNameExtensionFilter filtroImagen = new FileNameExtensionFilter("JPG, PNG & GIF","jpg","png","gif");
-        FileNameExtensionFilter filtroDoc = new FileNameExtensionFilter("TXT, DOC & PDF","txt","doc","pdf");
+        FileNameExtensionFilter filtroImagen = new FileNameExtensionFilter("JPG, PNG & GIF","jpg","jpeg","png","gif");
+        FileNameExtensionFilter filtroDoc = new FileNameExtensionFilter("TXT & DOC","txt","doc");
         FileNameExtensionFilter filtroVideo = new FileNameExtensionFilter("AVI, MP4 & MP3","avi","mp4","mp3");
- 
+               
+        
         if (null != tipoS.getSelectedItem().toString()) switch (tipoS.getSelectedItem().toString()) {
             case "Imagen":
                 selectorDirectorios.setFileFilter(filtroImagen);
@@ -1820,7 +1813,6 @@ public class Inicio extends javax.swing.JFrame {
     private javax.swing.JButton eliminarO;
     private javax.swing.JComboBox<String> existentesNC;
     private javax.swing.JButton explorarS;
-    private javax.swing.JPanel inicio_mostrarI;
     private javax.swing.JTextField input_nombreB;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel12;
@@ -1850,6 +1842,7 @@ public class Inicio extends javax.swing.JFrame {
     private javax.swing.JTextField objetoO;
     private javax.swing.JButton opcionesB;
     private javax.swing.JTextArea panelDoc;
+    private javax.swing.JLabel panelInicio;
     private javax.swing.JLabel panelVisualizar;
     private javax.swing.JButton pauseV;
     private javax.swing.JButton playV;
