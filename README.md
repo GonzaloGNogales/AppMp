@@ -15,12 +15,44 @@ Además tiene la opción de personalizar el color de las ventanas para satisface
 You need to have java installed in your computer (at least java 8). You can use the .jar file that we submitted on the Release tab or
 compile it yourself with Netbeans or comands.
 
-Once you have the .jar file, all you need to do is to execute it as a usual aplication.
+To compile with commands:
+
+```
+javac *.java 
+```
+With it you compile all java class generinc .class, witch we will package into the jar file with:
+
+```
+jar cf GestorArchivos.jar manifest.mf *.class  
+```
+The manifest.mf file has to contain the main class GestorArchivos.
+
+Once you have the .jar file, all you need to do is to execute it as a usual aplication with:
+
+```
+java -jar .\GestorArchivos.jar
+```
 __________________
 
 Es necesario tener instalado java en tu pc, recomendamos usar java 8, puedes usar el .jar que publicamos en la pestaña Release o compilarlo tú mismo con Netbeans o comandos.
+Los comandos necesarios son:
 
-Una vez tengas el .jar lo puedes ejecutar como una aplicación normal.
+```
+javac *.java 
+```
+Con este comando compilamos las clases java generando .class, las cuales empaquetaremos en un jar mediante el comando:
+
+```
+jar cf GestorArchivos.jar manifest.mf *.class  
+```
+
+El manifest.mf tiene que referenciar a la clase principal GestorArchivos.
+
+Una vez tengas el .jar lo puedes ejecutar como una aplicación normal con
+
+```
+java -jar .\GestorArchivos.jar
+```
 
 ### Installing / Instalación:
 
