@@ -1,2 +1,7 @@
 /build/
+<<<<<<< HEAD
 /dist/
+=======
+/dist/
+/AppMp/build/
+>>>>>>> repair
